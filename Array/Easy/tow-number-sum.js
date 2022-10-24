@@ -46,6 +46,8 @@ const solution1 = () => {
     return []
 }
 
+/* --------------------------------------------------------------- */
+
 const solution2=(array,targetSum)=>{
     const numbersObj={}
     let y;
@@ -60,6 +62,8 @@ const solution2=(array,targetSum)=>{
     }
     return []
 }
+
+/* --------------------------------------------------------------- */
 
 const solution3=(array,targetSum)=>{
     let leftAndRightSum=0;
