@@ -46,6 +46,8 @@ function solution1(array) {
     })
 }
 
+*/ ------------------------------------------------------------------- /*
+
 function solution2(array) {
     const squaredArray=[]
     let rightPointer=array.length-1;
