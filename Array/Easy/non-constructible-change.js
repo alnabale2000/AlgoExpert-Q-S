@@ -44,14 +44,13 @@ coins = [5, 7, 1, 1, 2, 3, 22]
 
 
 function solution1(coins) {
-    coins.sort((n1, n2) => n1 - n2)
-    let change = 0;
-    for (let i in coins) {
-        if (coins[i] > change + 1) return change + 1
-        change += coins[i]
+    coins.sort((n1,n2)=>n1-n2)
+    let change=0;
+    for (let coin of coins) {
+        if(coin > change+1) break
+        change+=coin
     }
-    if (coins.length > 1 || change === 1) return change + 1
-    return 1
+    return change+1
 }
 
 console.log(solution1(coins))
