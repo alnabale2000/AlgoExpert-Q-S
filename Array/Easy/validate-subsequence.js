@@ -35,7 +35,7 @@ array = [5, 1, 22, 25, 6, -1, 8, 10]
 sequence = [1, 6, 10, -1]
 
 function solution1(array, sequence) {
-    let subIndex=0;
+    let subIndex=0; 
     for (const num of array) {
         if(num===sequence[subIndex]){
             subIndex++
