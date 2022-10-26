@@ -53,8 +53,10 @@ O(n) time | O(k) space - where n is the number of competitions and k is the numb
 
 competitions = [
     ["HTML", "C#"],
+    ["C#", "Python"],
+    ["Python", "HTML"],
 ]
-results = [1]
+results = [0, 0, 1]
 
 // C# beats HTML, Python Beats C#, and Python Beats HTML.
 // HTML - 0 points 

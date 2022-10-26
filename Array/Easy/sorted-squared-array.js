@@ -56,6 +56,7 @@ function solution2(array) {
         let right=array[rightPointer]*array[rightPointer]
         let left=array[leftPointer]*array[leftPointer]
         if(right>left){
+            //still didn't now that unshift complexity is O(n), I was thinking it is O(1) like push 
             squaredArray.unshift(right)
             rightPointer--;
         }else{

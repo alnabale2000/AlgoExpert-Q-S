@@ -31,6 +31,7 @@ Hint 3
 Try storing every number in a hash table, solving the equation mentioned in Hint #2 for every number, and checking
 if the Y that you find is stored in the hash table. What are the time and space implications of this approach?
 Optimal Space & Time Complexity
+O(n)ST || O(nLogn) Time O(1)Space
 */
 
 array = [4, 6, 1, -3],
@@ -42,7 +43,7 @@ const solution1 = () => {
             if (array[i] + array[j] === targetSum && i !== j)
                 return [array[i], array[j]]
         }
-    }
+    } 
     return []
 }
 
@@ -64,6 +65,7 @@ const solution2=(array,targetSum)=>{
 }
 
 /* --------------------------------------------------------------- */
+// -3 1 4 6 9
 
 const solution3=(array,targetSum)=>{
     let leftAndRightSum=0;
