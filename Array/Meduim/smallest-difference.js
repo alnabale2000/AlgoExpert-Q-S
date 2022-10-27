@@ -12,6 +12,9 @@ Sample Input
 arrayOne = [-1, 5, 10, 20, 28, 3]
 arrayTwo = [26, 134, 135, 15, 17]
 
+//-1 3 5 10 20 28
+// 15 17 26 134 135 0 0 0 0 0 0 
+
 Sample Output
 [28, 26]
 
@@ -26,7 +29,7 @@ Would it help if the two arrays were sorted? If the arrays were sorted and you w
 the next pair of numbers to look at? What are the runtime implications of sorting the arrays?
 
 Hint 3
-Start by sorting both arrays, as per Hint #2. Put a pointer at the beginning of both arrays and evaluate the absolute difference of the pointernumbers. If the difference is equal to zero, then you've found the closest pair; otherwise, increment the pointer of the smaller of the two
+Start by sorting both arrays, as per Hint #2. Put a pointer at the beginning of both arrays and evaluate the absolute difference of the pointer numbers. If the difference is equal to zero, then you've found the closest pair; otherwise, increment the pointer of the smaller of the two
 numbers to find a potentially better pair. Continue until you get a pair with a difference of zero or until one of the pointers gets out of range of
 its array.
 
@@ -34,6 +37,40 @@ Optimal Space & Time Complexity
 O(nlog(n) + mlog(m)) time | O(1) space - where n is the length of the first input array and m is the length of the second input array
 */
 
-function solution(arrayOne, arrayTwo) {
-    // Write your code here.
-  }
+arrayOne = [-1, 5, 10, 20, 28, 3]
+arrayTwo = [26, 134, 135, 15, 17 ]
+
+//-1 3 5 10 20 28
+// 15 17 26 134 135 0 0 0 0 0 0 
+
+function solution1(arrayOne, arrayTwo) {
+    arrayOne.sort((n1,n2)=>n1-n2)
+    arrayTwo.sort((n1,n2)=>n1-n2)
+    let smDiff=1000;
+    let smDiffArr=[];
+    let firstP=0
+    let secondP=0
+
+
+
+    while (firstP <arrayOne.length && secondP<arrayTwo.length) {
+        if(arrayOne[firstP]>=arrayTwo[secondP]){
+            if(arrayOne[firstP]-arrayTwo[secondP]<smDiff ){
+                smDiff=arrayOne[firstP]-arrayTwo[secondP]
+                smDiffArr=[arrayOne[firstP],arrayTwo[secondP]]
+            }
+            secondP++
+        }
+        if(arrayOne[firstP]<arrayTwo[secondP]){
+            if(arrayTwo[secondP]-arrayOne[firstP]<smDiff ){
+                smDiff=arrayTwo[secondP]-arrayOne[firstP]
+                smDiffArr=[arrayOne[firstP],arrayTwo[secondP]]
+            }
+            firstP++
+        }
+        if (smDiff===0) return smDiffArr
+    }
+    return smDiffArr;
+}
+
+console.log(solution1(arrayOne, arrayTwo))
