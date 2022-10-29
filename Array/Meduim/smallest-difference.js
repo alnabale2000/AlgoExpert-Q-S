@@ -51,8 +51,6 @@ function solution1(arrayOne, arrayTwo) {
     let firstP=0
     let secondP=0
 
-
-
     while (firstP <arrayOne.length && secondP<arrayTwo.length) {
         if(arrayOne[firstP]>=arrayTwo[secondP]){
             if(arrayOne[firstP]-arrayTwo[secondP]<smDiff ){
