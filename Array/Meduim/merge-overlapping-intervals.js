@@ -42,7 +42,7 @@ intervals = [[1, 2], [3, 5], [4, 7], [6, 8], [9, 10]]
 
 function solution1(array) {
 
-    // array.sort((a,b)=>a[0]-b[0])
+    array.sort((a,b)=>a[0]-b[0])
     console.log('array', array)
     const result=[]
     for(let i in array){
