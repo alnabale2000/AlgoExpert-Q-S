@@ -46,7 +46,7 @@ O(n + m) time | O(c) space - where n is the number of characters, m is the lengt
 */
 
 characters = "Bste!hetsi ogEAxpelrt x "
-doc = "AlgoExpert is the BestZ!"
+doc = "AlgoExpert is the Best!"
 
 function solution1(characters, document) {
     const charObj = {}
